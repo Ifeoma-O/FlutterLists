@@ -11,9 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color dark = Color(0xFF022534);
+    Color mid = Color(0xFF08546C);
+    Color light = Color(0xFFA0BACC);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MainScreen(),
     );
   }
 }
+

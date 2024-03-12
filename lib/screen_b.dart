@@ -2,26 +2,39 @@
 
 import 'package:flutter/material.dart';
 
-class OtherScreen extends StatelessWidget{
+class Shugamommy extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    Color dark = Color(0xFF022534);
+    Color mid = Color(0xFF08546C);
+    Color light = Color(0xFFA0BACC);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Other Screen'),
+        title: Text('My Shuga Mommyyyyy'),
       ),
-      body: ListView(
-        children: [
-          ListTile(
-            onTap: (){
-              Navigator.pop(context);
-            },
-            leading: Icon(Icons.wb_auto),
-            title: Text('Go back to main screen'),
-            trailing: Icon(Icons.keyboard_arrow_left),
-          ),
-        ],
-      ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: dark,
+        ),
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: light,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding:  EdgeInsets.all(10),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/shuga.jpg'),
+                  radius: 80,
+                ),
+              ),
+            ),
+          ],
+        ),
+      )
     );
   }
 }
